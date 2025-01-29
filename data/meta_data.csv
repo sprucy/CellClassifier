@@ -1,0 +1,3 @@
+SpecimenID,SeuratMapping,L23_depth_normalized,Is_deep_FREM3,SEA_AD,ephys_session_id,hemisphere,structure,donor_id,biological_sex,age,medical_conditions,cell_soma_normalized_depth,depth_from_pia_um
+541549258,Exc L2-3 LINC00507 FREM3,0.2092,FALSE,,541549227,left,MTG,H16.03.007,F,28 yrs,epilepsy,0.165168855,558
+H23.29.252.11.91.02,UNKNOWN,0.802,TRUE,,,,TemL,,,,,,

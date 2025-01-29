@@ -1,0 +1,14 @@
+--- Program Setup Info ---
+min_cells_per_type:5
+cell_subset:  Superficial
+modality:     Ephys
+taxonomy:     Berg
+dataset:      (230, 37)
+train_data:   (184, 36)
+train_label:  ['Exc L2 LAMP5 LTK' 'Exc L2-3 LINC00507 FREM3 superficial'
+ 'Exc L2-4 LINC00507 GLP2R']
+test_data:    (46, 36)
+test_label:   ['Exc L2 LAMP5 LTK' 'Exc L2-3 LINC00507 FREM3 superficial'
+ 'Exc L2-4 LINC00507 GLP2R']
+presets:      medium_quality
+--- End of Program Setup Info ---

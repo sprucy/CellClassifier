@@ -1,0 +1,38 @@
+[default]
+data_path = "data"
+model_path = "models"
+
+[dataload]
+meta_file = "meta_data_withVU.csv"
+ephys_file = "ephys_data_withVU.csv"
+morph_file = "morph_data_withVU.csv"
+modality = ['Ephys', 'Morph']           # 'Ephys', 'Morph'
+taxonomy = "Berg"                       # 'Berg'、'SEA_AD' 或 'Mouse'
+cell_subset = ['Superficial','Deep']    # 'Superficial'、'Deep'
+
+[preprocess]
+min_cells_per_type = 5
+threshold_null = 0.2
+test_split_rate = 20
+is_stratify = true
+is_shuffle = true
+imputermethod = 'knn'                   # None, 'knn', 'linear', 'polynomial', 'decisiontree'
+scalermethod = 'standard'               # None,'standard','maxabs','minmax', 'normalizer','power', 'quantile', 'robust'
+oversamplermethod = 'smote'             # None,'random', 'smote', 'smoten', 'smotenc', 'borderline', 'adasyn', 'svmsmote', 'kmeans'
+
+[train]
+excluded_model_types = []               # 'GBM','CAT','XGB','RF','XT','KNN','LR','NN_TORCH','FASTAI'
+verbosity = 2
+time_limit = 3600
+presets = 'medium_quality'              # 'Customize', 'medium_quality', 'good_quality','high_quality', 'best_quality', 'optimize_for_deployment', 'interpretable', 'ignore_text'
+eval_metric = 'accuracy'                # 'accuracy', 'balanced_accuracy', 'f1', 'f1_macro', 'f1_micro', 'f1_weighted','log_loss', 'pac_score','precision', 'average_precision', ...
+auto_stack = true
+num_bag_folds = 5
+num_stack_levels = 2
+dynamic_stacking = false
+validation_procedure = "holdout"
+n_folds = 5
+n_repeats = 1
+is_distill = false
+teacher_preds = 'soft'                  # None,'soft','hard'
+augment_method = 'munge'                # None,'munge','spunge'

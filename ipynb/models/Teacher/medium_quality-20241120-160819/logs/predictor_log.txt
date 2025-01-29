@@ -1,0 +1,12 @@
+Verbosity: 2 (Standard Logging)
+=================== System Info ===================
+AutoGluon Version:  1.1.1
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.22631
+CPU Count:          8
+Memory Avail:       5.51 GB / 15.73 GB (35.0%)
+Disk Space Avail:   136.62 GB / 312.00 GB (43.8%)
+===================================================
+Presets specified: ['medium_quality']

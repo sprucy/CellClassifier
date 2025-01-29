@@ -1,0 +1,121 @@
+Verbosity: 2 (Standard Logging)
+=================== System Info ===================
+AutoGluon Version:  1.1.1
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.22631
+CPU Count:          8
+Memory Avail:       4.10 GB / 15.73 GB (26.1%)
+Disk Space Avail:   137.67 GB / 312.00 GB (44.1%)
+===================================================
+Presets specified: ['medium_quality']
+Beginning AutoGluon training ... Time limit = 3600s
+AutoGluon will save models to "models\Teacher\medium_quality-20241121-202318"
+Train Data Rows:    184
+Train Data Columns: 36
+Label Column:       label
+AutoGluon infers your prediction problem is: 'multiclass' (because dtype of label-column == object).
+	3 unique label values:  ['Exc L2-3 LINC00507 FREM3 superficial', 'Exc L2 LAMP5 LTK', 'Exc L2-4 LINC00507 GLP2R']
+	If 'multiclass' is not the correct problem_type, please manually specify the problem_type parameter during Predictor init (You may specify problem_type as one of: ['binary', 'multiclass', 'regression', 'quantile'])
+Problem Type:       multiclass
+Preprocessing data ...
+Train Data Class Count: 3
+Using Feature Generators to preprocess the data ...
+Fitting AutoMLPipelineFeatureGenerator...
+	Available Memory:                    4159.96 MB
+	Train Data (Original)  Memory Usage: 0.05 MB (0.0% of available memory)
+	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
+	Stage 1 Generators:
+		Fitting AsTypeFeatureGenerator...
+	Stage 2 Generators:
+		Fitting FillNaFeatureGenerator...
+	Stage 3 Generators:
+		Fitting IdentityFeatureGenerator...
+	Stage 4 Generators:
+		Fitting DropUniqueFeatureGenerator...
+	Stage 5 Generators:
+		Fitting DropDuplicatesFeatureGenerator...
+	Types of features in original data (raw dtype, special dtypes):
+		('float', []) : 36 | ['input_resistance', 'sag', 'VmatSag', 'vmbaseM', 'tau', ...]
+	Types of features in processed data (raw dtype, special dtypes):
+		('float', []) : 36 | ['input_resistance', 'sag', 'VmatSag', 'vmbaseM', 'tau', ...]
+	0.0s = Fit runtime
+	36 features in original data used to generate 36 features in processed data.
+	Train Data (Processed) Memory Usage: 0.05 MB (0.0% of available memory)
+Data preprocessing and feature engineering runtime = 0.06s ...
+AutoGluon will gauge predictive performance using evaluation metric: 'accuracy'
+	To change this, specify the eval_metric parameter of Predictor()
+Automatically generating train/validation split with holdout_frac=0.2, Train Rows: 147, Val Rows: 37
+User-specified model hyperparameters to be fit:
+{
+	'NN_TORCH': {},
+	'GBM': [{'extra_trees': True, 'ag_args': {'name_suffix': 'XT'}}, {}, 'GBMLarge'],
+	'CAT': {},
+	'XGB': {},
+	'FASTAI': {},
+	'RF': [{'criterion': 'gini', 'ag_args': {'name_suffix': 'Gini', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'entropy', 'ag_args': {'name_suffix': 'Entr', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile']}}],
+	'XT': [{'criterion': 'gini', 'ag_args': {'name_suffix': 'Gini', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'entropy', 'ag_args': {'name_suffix': 'Entr', 'problem_types': ['binary', 'multiclass']}}, {'criterion': 'squared_error', 'ag_args': {'name_suffix': 'MSE', 'problem_types': ['regression', 'quantile']}}],
+	'KNN': [{'weights': 'uniform', 'ag_args': {'name_suffix': 'Unif'}}, {'weights': 'distance', 'ag_args': {'name_suffix': 'Dist'}}],
+}
+Fitting 13 L1 models ...
+Fitting model: KNeighborsUnif ... Training model for up to 3599.94s of the 3599.94s of remaining time.
+	0.5135	 = Validation score   (accuracy)
+	2.25s	 = Training   runtime
+	0.18s	 = Validation runtime
+Fitting model: KNeighborsDist ... Training model for up to 3597.5s of the 3597.5s of remaining time.
+	0.5135	 = Validation score   (accuracy)
+	0.0s	 = Training   runtime
+	0.0s	 = Validation runtime
+Fitting model: NeuralNetFastAI ... Training model for up to 3597.49s of the 3597.49s of remaining time.
+No improvement since epoch 7: early stopping
+	0.6486	 = Validation score   (accuracy)
+	1.69s	 = Training   runtime
+	0.01s	 = Validation runtime
+Fitting model: LightGBMXT ... Training model for up to 3595.77s of the 3595.77s of remaining time.
+	0.6216	 = Validation score   (accuracy)
+	0.25s	 = Training   runtime
+	0.0s	 = Validation runtime
+Fitting model: LightGBM ... Training model for up to 3595.51s of the 3595.51s of remaining time.
+	0.7027	 = Validation score   (accuracy)
+	0.18s	 = Training   runtime
+	0.0s	 = Validation runtime
+Fitting model: RandomForestGini ... Training model for up to 3595.31s of the 3595.31s of remaining time.
+	0.6216	 = Validation score   (accuracy)
+	0.56s	 = Training   runtime
+	0.02s	 = Validation runtime
+Fitting model: RandomForestEntr ... Training model for up to 3594.71s of the 3594.71s of remaining time.
+	0.6486	 = Validation score   (accuracy)
+	0.49s	 = Training   runtime
+	0.04s	 = Validation runtime
+Fitting model: CatBoost ... Training model for up to 3594.15s of the 3594.15s of remaining time.
+	0.7027	 = Validation score   (accuracy)
+	2.02s	 = Training   runtime
+	0.0s	 = Validation runtime
+Fitting model: ExtraTreesGini ... Training model for up to 3592.13s of the 3592.13s of remaining time.
+	0.6486	 = Validation score   (accuracy)
+	0.47s	 = Training   runtime
+	0.04s	 = Validation runtime
+Fitting model: ExtraTreesEntr ... Training model for up to 3591.6s of the 3591.6s of remaining time.
+	0.6757	 = Validation score   (accuracy)
+	0.47s	 = Training   runtime
+	0.04s	 = Validation runtime
+Fitting model: XGBoost ... Training model for up to 3591.08s of the 3591.08s of remaining time.
+	0.7027	 = Validation score   (accuracy)
+	0.29s	 = Training   runtime
+	0.0s	 = Validation runtime
+Fitting model: NeuralNetTorch ... Training model for up to 3590.76s of the 3590.76s of remaining time.
+	0.7297	 = Validation score   (accuracy)
+	2.04s	 = Training   runtime
+	0.01s	 = Validation runtime
+Fitting model: LightGBMLarge ... Training model for up to 3588.7s of the 3588.7s of remaining time.
+	0.6757	 = Validation score   (accuracy)
+	0.63s	 = Training   runtime
+	0.0s	 = Validation runtime
+Fitting model: WeightedEnsemble_L2 ... Training model for up to 360.0s of the 3587.98s of remaining time.
+	Ensemble Weights: {'NeuralNetTorch': 0.5, 'ExtraTreesEntr': 0.333, 'KNeighborsDist': 0.167}
+	0.7838	 = Validation score   (accuracy)
+	0.1s	 = Training   runtime
+	0.0s	 = Validation runtime
+AutoGluon training complete, total runtime = 12.14s ... Best model: WeightedEnsemble_L2 | Estimated inference throughput: 633.9 rows/s (37 batch size)
+TabularPredictor saved. To load, use: predictor = TabularPredictor.load("models\Teacher\medium_quality-20241121-202318")

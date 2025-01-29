@@ -1,0 +1,57 @@
+[[pages]]
+name = "Load Dataset"
+icon = "✅"
+is_section = true
+
+[[pages]]
+path = "st_tcell/st_dataload.py"
+name = "Dataset loading ..."
+icon = "📤"
+
+[[pages]]
+path = "st_tcell/st_datacombin.py"
+name = "Dataset combining ..."
+icon = "📑"
+
+[[pages]]
+name = "Preprocess"
+icon = "✅"
+is_section = true
+
+[[pages]]
+path = "st_tcell/st_preprocess.py"
+name = "Data Preprocessing ..."
+icon = "📝"
+
+[[pages]]
+path = "st_tcell/st_explor.py"
+name = "Data exploring ..."
+icon = "📊"
+
+[[pages]]
+name = "Train"
+icon = "✅"
+is_section = true
+
+[[pages]]
+path = "st_tcell/st_train.py"
+name = "Training model ..."
+icon = "🔂"
+
+[[pages]]
+path = "st_tcell/st_distill.py"
+name = "Distilling ..."
+icon = "🕎"
+
+[[pages]]
+name = "Prediction"
+icon = "✅"
+is_section = true
+
+[[pages]]
+path = "st_tcell/st_evaluate.py"
+name = "evaluate ..."
+icon = "⛳"
+
+
+
